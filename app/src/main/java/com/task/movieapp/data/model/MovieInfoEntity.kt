@@ -12,6 +12,7 @@ data class MovieInfoEntity(
     val backdropPath: String? = null,
     val posterPath: String? = null,
     val releaseDate: String? = null,
+    val overview: String? = null,
     val genreIds: ArrayList<Int> = arrayListOf(),
 ) : Serializable {
     @PrimaryKey(autoGenerate = true)

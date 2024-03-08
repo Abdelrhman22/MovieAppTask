@@ -29,6 +29,7 @@ data class Movie(
             backdropPath = Constants.BACKDROP_URL + backdropPath,
             posterPath = Constants.POSTER_URL + posterPath,
             releaseDate = releaseDate,
+            overview = overview,
             genreIds = genreIds
         )
     }

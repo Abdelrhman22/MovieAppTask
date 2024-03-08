@@ -104,6 +104,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:doubleValue="@{movieItem.voteAverage}"
+                android:text='@{String.format("%.2f", movieItem.voteAverage)}'
                 app:layout_constraintBottom_toBottomOf="@+id/progressWheel"
                 app:layout_constraintEnd_toEndOf="@+id/progressWheel"
                 app:layout_constraintStart_toStartOf="@+id/progressWheel"

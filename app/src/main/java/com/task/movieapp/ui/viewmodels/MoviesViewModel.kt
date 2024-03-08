@@ -1,4 +1,4 @@
-package com.task.movieapp.ui
+package com.task.movieapp.ui.viewmodels
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
