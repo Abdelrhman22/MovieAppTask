@@ -6,5 +6,6 @@ object Constants {
     const val TABLE_NAME = "movies"
     const val DATABASE_NAME = "movies.db"
     const val API_KEY = "c50f5aa4e7c95a2a553d29b81aad6dd0"
-
+    const val POSTER_URL = "https://image.tmdb.org/t/p/w342"
+    const val BACKDROP_URL = "https://image.tmdb.org/t/p/w780"
 }

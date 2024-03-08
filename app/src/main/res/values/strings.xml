@@ -3,4 +3,5 @@
     <string name="request_failed_press_to_try_again">Request Failed Press to try again</string>
     <string name="no_data_found">No Data Found</string>
     <string name="str_network_no_internet_connection">There is no wifi or internet connection</string>
+    <string name="str_vote">Vote Is</string>
 </resources>

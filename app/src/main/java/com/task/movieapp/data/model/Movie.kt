@@ -1,6 +1,7 @@
 package com.task.movieapp.data.model
 
 import com.google.gson.annotations.SerializedName
+import com.task.movieapp.utils.Constants
 import java.io.Serializable
 
 data class Movie(
@@ -25,8 +26,8 @@ data class Movie(
         return MovieInfoEntity(
             title = title,
             voteAverage = voteAverage,
-            backdropPath = backdropPath,
-            posterPath = posterPath,
+            backdropPath = Constants.BACKDROP_URL + backdropPath,
+            posterPath = Constants.POSTER_URL + posterPath,
             releaseDate = releaseDate,
             genreIds = genreIds
         )
