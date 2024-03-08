@@ -3,5 +3,7 @@
     <string name="request_failed_press_to_try_again">Request Failed Press to try again</string>
     <string name="no_data_found">No Data Found</string>
     <string name="str_network_no_internet_connection">There is no wifi or internet connection</string>
-    <string name="str_vote">Vote Is</string>
+    <string name="str_vote">Vote Average</string>
+    <string name="str_home">Home Screen</string>
+    <string name="str_overview_sample">When the plots of reclusive author Elly Conway\'s fictional espionage novels begin to mirror the covert actions of a real-life spy organization, quiet evenings at home become a thing of the past. Accompanied by her cat Alfie and Aiden, a cat-allergic spy, Elly races across the world to stay one step ahead of the killers as the line between Conway\'s fictional world and her real one begins to blur.</string>
 </resources>
