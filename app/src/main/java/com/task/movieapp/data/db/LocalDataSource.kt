@@ -10,5 +10,5 @@ interface LocalDataSource {
 
     suspend fun cacheList(list: List<MovieInfoEntity>)
 
-
+    suspend fun getLastCacheTime() : Long?
 }

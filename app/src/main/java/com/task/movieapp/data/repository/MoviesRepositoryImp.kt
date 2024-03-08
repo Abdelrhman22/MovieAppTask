@@ -13,16 +13,29 @@ class MoviesRepositoryImp @Inject constructor(
 
         val cachedList = localDataSource.getListFromCache()
 
-        if (cachedList.isNotEmpty() && !isForceUpdateData)
+        if (cachedList.isNotEmpty() && !isForceUpdateData && !isCacheExpired())
             return cachedList
 
+        val currentTime = System.currentTimeMillis()
         val response = remoteDataSource.getMoviesFromServer(isForceUpdateData)
         val listToSaved = response.results.map {
-            it.asEntity()
+            it.asEntity().copy(timestamp = currentTime)
         }
         localDataSource.clearCache()
         localDataSource.cacheList(listToSaved)
 
         return listToSaved
+    }
+
+    private suspend fun isCacheExpired(): Boolean {
+        val currentTime = System.currentTimeMillis()
+        val lastCacheTime = localDataSource.getLastCacheTime() ?: return true
+        // Check if the difference between current time and last cache time is more than 4 hours
+        return currentTime - lastCacheTime > CACHE_EXPIRATION_TIME
+    }
+
+
+    companion object {
+        private const val CACHE_EXPIRATION_TIME = 4 * 60 * 60 * 1000 // 4 hours in milliseconds
     }
 }

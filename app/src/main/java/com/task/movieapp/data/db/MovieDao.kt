@@ -18,4 +18,8 @@ interface MovieDao {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun cacheList(vararg list: MovieInfoEntity)
+
+    @Query("SELECT MAX(timestamp) FROM ${Constants.TABLE_NAME}")
+    suspend fun getLastCacheTime(): Long?
+
 }

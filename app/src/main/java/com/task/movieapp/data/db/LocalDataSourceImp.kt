@@ -15,5 +15,7 @@ class LocalDataSourceImp @Inject constructor(private val movieDao: MovieDao) :
         movieDao.cacheList(*list.toTypedArray())
     }
 
+    override suspend fun getLastCacheTime() = movieDao.getLastCacheTime()
+
 
 }

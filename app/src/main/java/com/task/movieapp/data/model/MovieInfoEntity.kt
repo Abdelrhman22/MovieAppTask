@@ -14,6 +14,7 @@ data class MovieInfoEntity(
     val releaseDate: String? = null,
     val overview: String? = null,
     val genreIds: ArrayList<Int> = arrayListOf(),
+    val timestamp: Long? = null // Timestamp indicating when the movie was cached
 ) : Serializable {
     @PrimaryKey(autoGenerate = true)
     var uniqueId: Int = 0
